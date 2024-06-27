@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MenuItem } from 'primeng/api';
-import { PrimeIcons } from 'primeng/api';
 import { CommonModule } from '@angular/common';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { FormsModule } from '@angular/forms';
 import { TabViewModule } from 'primeng/tabview';
 import { AuthService } from '../../../services/auth.service';
+import { Input } from '@angular/core';
+import { Product } from '../../../models/product';
 @Component({
   selector: 'app-checkout-form',
   standalone: true,
@@ -21,20 +21,13 @@ import { AuthService } from '../../../services/auth.service';
   styleUrl: './checkout-form.component.css',
 })
 export class CheckoutFormComponent implements OnInit {
-  items: MenuItem[] | undefined;
   images: string[] = [];
   selectedImage: string | undefined;
-  home: MenuItem | undefined;
-  value1: number = 1;
+  @Input() product: Product = new Product();
   constructor(private imageService: AuthService) {}
   ngOnInit() {
     this.images = this.imageService.getImages();
     this.selectedImage = this.images[0];
-    this.items = [
-      {
-        label: 'Product Overview',
-      },
-    ];
   }
 
   selectImage(image: string): void {

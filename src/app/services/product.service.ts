@@ -12,4 +12,7 @@ export class ProductService {
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.apiUrl);
   }
+  getTopRatedProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.apiUrl}/top-rated`);
+  }
 }
