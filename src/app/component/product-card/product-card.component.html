@@ -1,0 +1,16 @@
+<div>
+  <div class="card1">
+    <div class="image-container">
+      <div class="category">{{ product.category }}</div>
+      <img [src]="product.img" alt="Product Image" class="product-image" />
+    </div>
+    <div class="card-body">
+      <div class="sb-container">
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="rating">⭐ {{ product.rating }}</p>
+      </div>
+      <p class="description">{{ product.description }}</p>
+      <p class="price">${{ product.price }}</p>
+    </div>
+  </div>
+</div>
