@@ -1,0 +1,30 @@
+<div class="content">
+  <div class="card">
+    <div class="main-description">
+      <div class="top-description">Popular Products</div>
+      <div class="bottom-description">Exclusive Selection</div>
+    </div>
+
+    <div class="inner-content">
+      <div class="inner-card" *ngFor="let product of products">
+        <app-product-card [product]="product"> </app-product-card>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="card">
+    <div class="inner-content1">
+      <div
+        class="inner-card1"
+        *ngFor="let productsWithCart of productsWithCarts"
+      >
+        <app-product-card-with-cart
+          [imageUrl]="productsWithCart.imageUrl"
+          [productName]="productsWithCart.productName"
+          [price]="productsWithCart.price"
+          [colors]="productsWithCart.colors"
+          [selectedColor]="productsWithCart.selectedColor"
+        ></app-product-card-with-cart>
+      </div>
+    </div>
+  </div> -->
+</div>
