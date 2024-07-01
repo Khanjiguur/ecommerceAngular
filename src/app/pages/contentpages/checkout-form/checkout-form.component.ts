@@ -7,7 +7,10 @@ import { TabViewModule } from 'primeng/tabview';
 import { AuthService } from '../../../services/auth.service';
 import { Input } from '@angular/core';
 import { Product } from '../../../models/product';
+<<<<<<< HEAD
 import { ButtonModule } from 'primeng/button';
+=======
+>>>>>>> origin/main
 @Component({
   selector: 'app-checkout-form',
   standalone: true,
@@ -17,7 +20,10 @@ import { ButtonModule } from 'primeng/button';
     InputNumberModule,
     FormsModule,
     TabViewModule,
+<<<<<<< HEAD
     ButtonModule,
+=======
+>>>>>>> origin/main
   ],
   templateUrl: './checkout-form.component.html',
   styleUrl: './checkout-form.component.css',

@@ -24,6 +24,7 @@
 .left {
   flex: 0 0 auto;
   padding: 1rem;
+<<<<<<< HEAD
   width: 50%;
   box-sizing: border-box;
 }
@@ -38,6 +39,22 @@
 .gallery-container {
   display: flex;
   width: 100%;
+=======
+  width: 58.3333%;
+  box-sizing: border-box;
+}
+.right {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  padding-left: 3rem !important;
+  flex: 0 0 auto;
+  padding: 1rem;
+  width: 33.3333%;
+}
+
+.gallery-container {
+  display: flex !important;
+>>>>>>> origin/main
 }
 .thumbnail-list {
   row-gap: 1rem;
@@ -83,6 +100,16 @@
   background-color: #162a41;
 }
 
+<<<<<<< HEAD
+=======
+.input-number .p-inputnumber {
+  width: 4rem;
+}
+
+.input-number .p-inputnumber .p-inputnumber-button {
+  align-items: center;
+}
+>>>>>>> origin/main
 .review {
   color: white;
   margin-top: 50px;
@@ -102,6 +129,7 @@
   border-radius: 8px;
   color: #ecf0f1;
 }
+<<<<<<< HEAD
 
 .size-selector {
   text-align: center;
@@ -171,3 +199,5 @@
 .add-to-cart-btn:hover {
   background-color: #293b51;
 }
+=======
+>>>>>>> origin/main
