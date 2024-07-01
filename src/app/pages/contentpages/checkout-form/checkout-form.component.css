@@ -24,6 +24,22 @@
 .left {
   flex: 0 0 auto;
   padding: 1rem;
+<<<<<<< HEAD
+  width: 50%;
+  box-sizing: border-box;
+}
+.right {
+  padding-top: 5rem !important;
+  padding-bottom: 1rem !important;
+  padding-right: 5rem !important;
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.gallery-container {
+  display: flex;
+  width: 100%;
+=======
   width: 58.3333%;
   box-sizing: border-box;
 }
@@ -38,6 +54,7 @@
 
 .gallery-container {
   display: flex !important;
+>>>>>>> origin/main
 }
 .thumbnail-list {
   row-gap: 1rem;
@@ -83,6 +100,8 @@
   background-color: #162a41;
 }
 
+<<<<<<< HEAD
+=======
 .input-number .p-inputnumber {
   width: 4rem;
 }
@@ -90,6 +109,7 @@
 .input-number .p-inputnumber .p-inputnumber-button {
   align-items: center;
 }
+>>>>>>> origin/main
 .review {
   color: white;
   margin-top: 50px;
@@ -109,3 +129,75 @@
   border-radius: 8px;
   color: #ecf0f1;
 }
+<<<<<<< HEAD
+
+.size-selector {
+  text-align: center;
+}
+
+.size-label {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.size-btn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.size-btn.selected,
+.size-btn:hover {
+  color: #ffffff;
+  border-color: #434190;
+}
+
+.size-guide {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.size-guide:hover {
+  text-decoration: underline;
+}
+.size-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.quantity {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 1.2em;
+  display: block;
+}
+
+.add-to-cart-btn {
+  background-color: #434190;
+  border: 1.5px solid #434190;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-right: 40px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #293b51;
+}
+=======
+>>>>>>> origin/main
