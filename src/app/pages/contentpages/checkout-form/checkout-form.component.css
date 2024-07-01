@@ -131,8 +131,8 @@
 
 .size-btn.selected,
 .size-btn:hover {
-  border-color: #434190;
   color: #ffffff;
+  border-color: #434190;
 }
 
 .size-guide {
