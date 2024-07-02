@@ -15,4 +15,7 @@ export class ProductService {
   getTopRatedProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.apiUrl}/top-rated`);
   }
+  getDataById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
 }

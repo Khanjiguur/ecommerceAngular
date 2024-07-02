@@ -11,20 +11,14 @@
       </div>
     </div>
   </div>
-  <!-- <div class="card">
+  <div class="card">
+    <div class="top-description1">All Products</div>
     <div class="inner-content1">
-      <div
-        class="inner-card1"
-        *ngFor="let productsWithCart of productsWithCarts"
-      >
+      <div class="inner-card1" *ngFor="let productsWithCart of products1">
         <app-product-card-with-cart
-          [imageUrl]="productsWithCart.imageUrl"
-          [productName]="productsWithCart.productName"
-          [price]="productsWithCart.price"
-          [colors]="productsWithCart.colors"
-          [selectedColor]="productsWithCart.selectedColor"
+          [product]="productsWithCart"
         ></app-product-card-with-cart>
       </div>
     </div>
-  </div> -->
+  </div>
 </div>

@@ -1,11 +1,11 @@
-<div class="card">
+<div class="card" (click)="navigateToCheckOutForm()">
   <div class="image-container">
-    <img [src]="imageUrl" alt="Product Image" class="product-image" />
-    <button class="add-to-cart">Add to Cart</button>
+    <img [src]="image" alt="Product Image" class="product-image" />
+    <button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
   </div>
   <div class="card-body">
-    <h3 class="product-name">{{ productName }}</h3>
-    <p class="price">${{ price }}</p>
+    <h3 class="product-name">{{ product.name }}</h3>
+    <p class="price">${{ product.price }}</p>
     <div class="color-options">
       <div class="color-container">
         <div

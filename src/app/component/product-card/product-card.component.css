@@ -8,6 +8,13 @@
   margin: 10px;
   position: relative;
 }
+.card1 {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
 .image-container {
   position: relative;
   width: 100%;

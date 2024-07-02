@@ -14,46 +14,15 @@ import { ProductService } from '../../../services/product.service';
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
+  products1: Product[] = [];
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.productService.getTopRatedProducts().subscribe((data) => {
       this.products = data;
     });
+    this.productService.getProducts().subscribe((data) => {
+      this.products1 = data;
+    });
   }
-
-  productsWithCarts = [
-    {
-      imageUrl:
-        'https://verona.primeng.org/assets/demo/images/ecommerce/product-list/product-list-2-1.png',
-      productName: 'Product Name 1',
-      price: 145.0,
-      colors: ['Bluegray', 'Indigo', 'Purple', 'Cyan'],
-      selectedColor: 'Bluegray',
-    },
-    {
-      imageUrl:
-        'https://verona.primeng.org/assets/demo/images/ecommerce/product-list/product-list-2-2.png',
-      productName: 'Product Name 2',
-      price: 130.0,
-      colors: ['Bluegray', 'Indigo', 'Purple', 'Cyan'],
-      selectedColor: 'Indigo',
-    },
-    {
-      imageUrl:
-        'https://verona.primeng.org/assets/demo/images/ecommerce/product-list/product-list-2-3.png',
-      productName: 'Product Name 3',
-      price: 150.0,
-      colors: ['Bluegray', 'Indigo', 'Purple', 'Cyan'],
-      selectedColor: 'Purple',
-    },
-    {
-      imageUrl:
-        'https://verona.primeng.org/assets/demo/images/ecommerce/product-list/product-list-2-4.png',
-      productName: 'Product Name 4',
-      price: 140.0,
-      colors: ['Bluegray', 'Indigo', 'Purple', 'Cyan'],
-      selectedColor: 'Cyan',
-    },
-  ];
 }

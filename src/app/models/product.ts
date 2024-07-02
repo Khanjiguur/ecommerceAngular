@@ -5,6 +5,6 @@ export class Product {
   category: string | undefined;
   rating: number | undefined;
   description: string | undefined;
-  img: string | undefined;
   color?: string | undefined;
+  imageUrls?: string[];
 }
