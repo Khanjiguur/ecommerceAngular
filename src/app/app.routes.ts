@@ -13,11 +13,6 @@ import { CheckoutFormComponent } from './pages/contentpages/checkout-form/checko
 
 export const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'product-over-view/1',
-    pathMatch: 'full',
-  },
-  {
     path: 'product-over-view/:id',
     component: ProductOverviewComponent,
   },

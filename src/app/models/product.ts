@@ -6,5 +6,5 @@ export class Product {
   rating: number | undefined;
   description: string | undefined;
   color?: string | undefined;
-  imageUrls?: string[];
+  imageUrls: string[] = [];
 }
