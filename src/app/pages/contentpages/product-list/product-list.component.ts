@@ -4,11 +4,16 @@ import { CommonModule } from '@angular/common';
 import { ProductCardWithCartComponent } from '../../../component/product-card-with-cart/product-card-with-cart.component';
 import { Product } from '../../../models/product';
 import { ProductService } from '../../../services/product.service';
-
+import { DataViewModule } from 'primeng/dataview';
 @Component({
   selector: 'app-product-list',
   standalone: true,
-  imports: [ProductCardComponent, CommonModule, ProductCardWithCartComponent],
+  imports: [
+    ProductCardComponent,
+    CommonModule,
+    DataViewModule,
+    ProductCardWithCartComponent,
+  ],
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.css',
 })

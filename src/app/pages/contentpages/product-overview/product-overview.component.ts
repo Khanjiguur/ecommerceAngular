@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../services/product.service';
 import { Router } from '@angular/router';
+import { CartService } from '../../../services/cart.service';
 @Component({
   selector: 'app-product-overview',
   standalone: true,
@@ -28,10 +29,12 @@ export class ProductOverviewComponent implements OnInit {
   images: string[] = [];
   selectedImage: string | undefined;
   counter: number = 1;
+
   constructor(
     private route: ActivatedRoute,
     private productService: ProductService,
-    private router: Router
+    private router: Router,
+    private cartService: CartService
   ) {}
   loadProductData(id: number): void {
     this.productService.getDataById(id).subscribe((response) => {
@@ -59,7 +62,11 @@ export class ProductOverviewComponent implements OnInit {
   decrement() {
     if (this.counter > 1) this.counter--;
   }
-  addToCart() {
-    this.router.navigate(['/shopping-cart']);
+
+  addToCart(productId: number) {
+    this.cartService.addToCart(productId, this.counter).subscribe(() => {
+      console.log('Product added to cart');
+      this.router.navigate(['/shopping-cart']);
+    });
   }
 }

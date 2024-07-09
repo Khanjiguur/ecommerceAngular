@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../../models/product';
 import { Router } from '@angular/router';
+import { CartService } from '../../services/cart.service';
 @Component({
   selector: 'app-product-card-with-cart',
   standalone: true,
@@ -20,14 +21,17 @@ export class ProductCardWithCartComponent implements OnInit {
     this.selectedColorName = this.selectedColor || this.colors[0];
     this.image = this.product.imageUrls ? this.product.imageUrls[0] : '';
   }
-  constructor(private router: Router) {}
+  constructor(private router: Router, private cartService: CartService) {}
   onColorClick(color: string) {
     this.selectedColorName = color;
   }
   navigateToCheckOutForm(): void {
     this.router.navigate(['/product-over-view', this.product.id]);
   }
-  addToCart() {
-    this.router.navigate(['/shopping-cart']);
+
+  addToCart(productId: any) {
+    this.cartService.addToCart(productId, 1).subscribe(() => {
+      console.log('Product added to cart');
+    });
   }
 }

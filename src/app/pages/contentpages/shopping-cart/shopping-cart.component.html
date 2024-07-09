@@ -1,3 +1,29 @@
 <div class="content">
-  <div class="card"><p>shopping-cart works!</p></div>
+  <div class="card">
+    <div class="cart-description">
+      <span class="top">Your cart total is $82.00</span>
+      <span>FREE SHIPPING AND RETURN</span>
+      <p-button (click)="orderCart()">Check Out</p-button>
+    </div>
+    <app-cart-items></app-cart-items>
+    <app-cart-items></app-cart-items>
+    <app-cart-items></app-cart-items>
+    <div class="cart-bottom">
+      <div class="cart-bottom-top">
+        <div class="bottom-des">
+          <span>Subtotal</span>
+          <div>$82.00</div>
+        </div>
+        <div class="bottom-des"><span>Shipping</span><span>Free</span></div>
+        <div class="bottom-des"><span>VAT</span><span>$8.00</span></div>
+      </div>
+      <div class="cart-bottom-bottom">
+        <div class="total">
+          <span>Total</span>
+          <div>$90.00</div>
+        </div>
+        <p-button class="doodoh" (click)="orderCart()">Check Out</p-button>
+      </div>
+    </div>
+  </div>
 </div>

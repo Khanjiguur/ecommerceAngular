@@ -23,16 +23,16 @@
           <div class="left-container1">
             <input
               type="text"
-              [(ngModel)]="product.price"
-              placeholder="Product Price"
+              placeholder="Product Code"
+              [(ngModel)]="product.code"
               class="input"
             />
           </div>
           <div class="left-container1">
             <input
               type="text"
-              [(ngModel)]="product.price"
-              placeholder="Product Price"
+              placeholder="Product SKU"
+              [(ngModel)]="product.sku"
               class="input"
             />
           </div>
@@ -82,12 +82,45 @@
         </div>
       </div>
       <div class="right">
-        <div class="right-container">a</div>
-        <div class="right-container">a</div>
-        <div class="right-container">a</div>
-        <div class="right-container">a</div>
-        <div class="right-container">a</div>
-        <div class="right-container">a</div>
+        <div class="right-container">
+          <div class="category-container">Rating</div>
+          <p-rating [(ngModel)]="product.rating" [cancel]="false" />
+        </div>
+        <div class="right-container">
+          <div class="category-container">Colors</div>
+          <p-dropdown
+            [options]="colors"
+            [(ngModel)]="product.color"
+            optionLabel="label"
+            optionValue="value"
+            name="color"
+            placeholder="Choose a Color"
+          ></p-dropdown>
+        </div>
+        <div class="right-container">
+          <div class="category-container">Category</div>
+          <p-dropdown
+            [options]="categories"
+            [(ngModel)]="product.category"
+            optionLabel="label"
+            optionValue="value"
+            name="category"
+            placeholder="Choose a Category"
+          ></p-dropdown>
+        </div>
+        <div class="right-container6">
+          <div>In Stock</div>
+          <div>
+            <p-inputSwitch
+              [(ngModel)]="product.stock"
+              (onChange)="onStockChange()"
+            />
+          </div>
+        </div>
+        <div class="right-container7">
+          <button class="discard" (click)="onDiscard()">Discard</button>
+          <button class="submit" (click)="onSubmit()">Submit</button>
+        </div>
       </div>
     </div>
   </div>

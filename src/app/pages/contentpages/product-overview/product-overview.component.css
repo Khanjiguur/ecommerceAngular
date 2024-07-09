@@ -203,3 +203,7 @@
 p-button {
   margin-right: 60px;
 }
+:host ::ng-deep .p-button {
+  background-color: #798bc8;
+  border-color: #798bc8;
+}

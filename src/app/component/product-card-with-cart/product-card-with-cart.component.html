@@ -1,7 +1,14 @@
-<div class="card" (click)="navigateToCheckOutForm()">
+<div class="card">
   <div class="image-container">
-    <img [src]="image" alt="Product Image" class="product-image" />
-    <button class="add-to-cart" (click)="addToCart()">Add to Cart</button>
+    <img
+      [src]="image"
+      alt="Product Image"
+      class="product-image"
+      (click)="navigateToCheckOutForm()"
+    />
+    <button class="add-to-cart" (click)="addToCart(product.id)">
+      Add to Cart
+    </button>
   </div>
   <div class="card-body">
     <h3 class="product-name">{{ product.name }}</h3>
