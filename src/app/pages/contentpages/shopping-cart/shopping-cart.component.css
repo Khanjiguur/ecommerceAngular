@@ -66,3 +66,8 @@
   font-size: 29px;
   font-weight: 400;
 }
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

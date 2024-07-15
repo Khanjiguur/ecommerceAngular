@@ -89,6 +89,7 @@ export class NewProductComponent implements OnInit {
     this.product.stock = false;
     this.product.sku = '';
     this.product.code = '';
+    this.addImageUrls = [];
     console.log('Discarded');
   }
 }
