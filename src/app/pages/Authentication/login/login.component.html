@@ -1,16 +1,16 @@
-<div class="login-container">
-  <form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
-    <label
-      >Email
-      <input type="email" formControlName="email" />
-    </label>
-    <label
-      >Password
-      <input type="password" formControlName="password" />
-    </label>
-    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
-    <h2>Login Form</h2>
-    <p>Email: {{ profileForm.value.email }}</p>
-    <p>Password: {{ profileForm.value.password }}</p>
+<div class="container">
+  <h2>Login</h2>
+  <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
+  <form (submit)="handleSubmit()">
+    <div class="form-group">
+      <label for="">Email: </label>
+      <input type="text" [(ngModel)]="email" name="email" />
+    </div>
+
+    <div class="form-group">
+      <label for="">Password: </label>
+      <input type="password" [(ngModel)]="password" name="password" />
+    </div>
+    <button type="submit">Login</button>
   </form>
 </div>

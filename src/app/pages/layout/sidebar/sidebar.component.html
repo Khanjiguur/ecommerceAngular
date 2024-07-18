@@ -15,7 +15,7 @@
       tooltipStyleClass="custom-tooltip"
     ></i
   ></a>
-  <a routerLink="/new-product"
+  <a *ngIf="isAuthenticated" routerLink="/new-product"
     ><i
       class="pi pi-search-plus"
       pTooltip="New Product"
@@ -23,7 +23,7 @@
       tooltipStyleClass="custom-tooltip"
     ></i
   ></a>
-  <a routerLink="/shopping-cart"
+  <a *ngIf="isAuthenticated" routerLink="/shopping-cart"
     ><i
       class="pi pi-shopping-bag"
       pTooltip="Shopping Cart"
@@ -32,7 +32,7 @@
     ></i
   ></a>
 
-  <a routerLink="/checkout-form"
+  <a *ngIf="isAuthenticated" routerLink="/checkout-form"
     ><i
       class="pi pi-check-square"
       pTooltip="Checkout Form"
@@ -40,10 +40,26 @@
       tooltipStyleClass="custom-tooltip"
     ></i
   ></a>
-  <a routerLink="/order-history"
+  <a *ngIf="isAuthenticated" routerLink="/order-history"
     ><i
       class="pi pi-history"
       pTooltip="Order History"
+      tooltipPosition="right"
+      tooltipStyleClass="custom-tooltip"
+    ></i
+  ></a>
+  <a *ngIf="isAuthenticated" routerLink="/user-management"
+    ><i
+      class="pi pi-user"
+      pTooltip="User Management"
+      tooltipPosition="right"
+      tooltipStyleClass="custom-tooltip"
+    ></i
+  ></a>
+  <a *ngIf="isAdmin" routerLink="/users"
+    ><i
+      class="pi pi-shield"
+      pTooltip="User Management"
       tooltipPosition="right"
       tooltipStyleClass="custom-tooltip"
     ></i

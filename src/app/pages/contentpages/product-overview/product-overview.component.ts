@@ -64,6 +64,7 @@ export class ProductOverviewComponent implements OnInit {
   }
 
   addToCart(productId: number) {
+    console.log(productId);
     this.cartService.addToCart(productId, this.counter).subscribe(() => {
       console.log('Product added to cart');
       this.router.navigate(['/shopping-cart']);

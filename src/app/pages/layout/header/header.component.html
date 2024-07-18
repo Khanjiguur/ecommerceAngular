@@ -8,16 +8,15 @@
   <div class="nav-title-search">
     <p class="nav-title">E-Commerce Web</p>
     <div class="nav-search">
-      <p-iconField iconPosition="left">
-        <p-inputIcon styleClass="pi pi-search" />
-        <input type="text" pInputText placeholder="Search" />
-      </p-iconField>
+      <div class="auth">
+        <div *ngIf="!isAuthenticated">
+          <a routerLink="/register">Register</a>
+        </div>
+        <div *ngIf="!isAuthenticated"><a routerLink="/login">Login</a></div>
+      </div>
+      <div *ngIf="isAuthenticated">
+        <a routerLink="" (click)="logout()">Logout</a>
+      </div>
     </div>
   </div>
 </nav>
-
-<!-- <div id="main">
-  <div style="background-color:coral;">1</div>
-  <div style="background-color:lightblue;">2</div>
-  <div style="background-color:pink;">3</div>
-</div> -->

@@ -56,9 +56,9 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   orderCart() {
+    this.router.navigate(['/checkout-form']);
     this.cartService.orderCart().subscribe(() => {
       console.log('Cart ordered');
-      this.router.navigate(['/checkout-form']);
     });
   }
 
